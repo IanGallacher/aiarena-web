@@ -1,0 +1,24 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: aiarena
+      MYSQL_DATABASE: aiarena
+      MYSQL_USER: aiarena
+      MYSQL_PASSWORD: aiarena
+    volumes:
+      - ./tmp/db:/var/lib/mysql
+  django:
+    build: .
+    command: bash -c entrypoints/django.sh
+    depends_on:
+      - db
+    image: 'aiarena-web'
+    ports:
+      - '8000:8000'
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/aiarena-web
+
