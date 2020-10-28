@@ -1,0 +1,20 @@
+$max-content-width: 992px;
+$min-content-width: $max-content-width + 1;
+$max-mobile-width: 600px;
+$min-mobile-width: $max-mobile-width + 1;
+$navbar-padding-vertical: 20px;
+$navbar-height: 80px;
+$nav-background: #24292e;
+$filterbar-height: 30px;
+$accent-color: #f90;
+$accent-color-dark: #cc7a00;
+
+/*
+** Form Variables
+*/
+$padding-base-vertical: 6px !default;
+$padding-base-horizontal: 12px !default;
+$line-height-base: 1.428571429 !default; // 20/14
+$font-size-base: 14px !default;
+$btn-border-radius-base: 15px;
+$input-color: #ccc;

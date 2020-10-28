@@ -1,0 +1,46 @@
+@import 'mixin';
+
+.alert-zone {
+  height: auto;
+  width: 100%;
+  flex: 1;
+  // Don't move the page content when showing alerts.
+  position: fixed;
+  cursor: pointer;
+  user-select: none;
+  // Show alerts above all page content.
+  z-index: 10;
+}
+
+.alert-error {
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background: #ff2121;
+  height: 0;
+  width: 100%;
+  border-bottom: 2px solid #e11;
+  &:hover { background: #ff3535; }
+}
+
+.alert-success {
+  transition: all 0.2s ease-in-out;
+  background: #21bb21;
+  opacity: 0;
+  height: 0;
+  width: 100%;
+  border-bottom: 2px solid #1a1;
+  &:hover { background: #35bb35; }
+}
+
+.alert-visable {
+  height: 60px;
+  opacity: 1;
+}
+
+.alert-text {
+  color: #fff;
+  margin-left: 50px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 60px;
+}

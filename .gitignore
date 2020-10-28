@@ -17,3 +17,8 @@ private-media/
 # coverage
 .coverage
 coverage-reports
+
+# frontend
+node_modules
+npm-debug.log
+/public/*

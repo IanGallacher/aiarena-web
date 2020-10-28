@@ -1,0 +1,167 @@
+@charset 'utf-8';
+
+@import 'alert';
+@import 'button';
+@import 'chart';
+@import 'clearfix';
+@import 'filter';
+@import 'form';
+@import 'header';
+@import 'loading';
+@import 'modal';
+@import 'patreon';
+@import 'splash';
+@import 'table';
+@import 'tradingcard';
+@import 'variables';
+
+body {
+  background: #fafafa;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+.bot-text {
+  color: inherit;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0; // hiding the dots is not good enough for some browser s.
+}
+
+pre {
+  background: #e8e8e8;
+  overflow-x: auto;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Setup a layout that will support a scrollbar below the header.
+.app {
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+}
+
+.embed {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+// The zone to display the scrollbar below the header.
+// flex: 1 makes sure that the height always fills the page.
+.scroll-zone {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.text-zone {
+  a {
+    color: $accent-color-dark;
+  }
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-horizontal {
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  @media(max-width: $max-mobile-width) { flex-direction: column; }
+}
+
+.flex-fill-remaining-space {
+  flex: auto;
+  width: 100%;
+}
+
+/* ---------------------------------------------------
+    PAGE-AREA STYLE
+----------------------------------------------------- */
+// Center all the content that is below the header.
+.page-area {
+  margin: auto;
+  margin-top: 0;
+  width: $max-content-width;
+  min-height: 100%;
+  background-color: #ddd;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  box-sizing: border-box;
+  // Avoid horizontal scrollbars by scalling by page width once we are too small.
+  @media (max-width: $max-content-width) { width: 100%; }
+}
+
+// Don't jump the page when the scrollbar appears.
+// https://css-tricks.com/elegant-fix-jumping-scrollbar-issue/
+// Essentially, 100vw - 100% is the width of the scrollbar, if it exists.
+// Use a before tag instead of margin to make use of max and min.
+.page-scroll-offset {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+
+  &::before {
+    content: '';
+    display: block;
+    width: calc(100vw - (#{$max-content-width} + (100vw - 100%)));
+    min-width: 0;
+    max-width: calc(100vw - 100%);
+  }
+}
+
+.page-zone {
+  flex-grow: 1;
+  background: #111;
+  height: 100%;
+  overflow-y: auto;
+}
+
+a[aria-expanded]::before {
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-size: 0.6em;
+}
+
+// Indent the dropdown menu.
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #0e1b4d;
+}

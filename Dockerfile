@@ -1,16 +1,12 @@
 FROM python:3.7-slim
 
-RUN apt-get update -qq && apt-get install -y build-essential curl
+RUN apt-get update -qq && apt-get install -y build-essential
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
 
 # needed for webpacker
-RUN apt-get remove yarn cmdtest \
-    && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
-    && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
-    && apt-get update \
-    && apt-get install -y nodejs yarn
+RUN apt-get install -y nodejs npm
 
 # Setup MySQL
 RUN apt-get install -y apt-utils lsb-release wget \

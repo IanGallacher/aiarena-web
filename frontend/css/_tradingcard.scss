@@ -1,0 +1,113 @@
+@import 'variables';
+
+// A "trading card" is a tileable summary of an object.
+// Named because it looks just like a trading card.
+.trading-card-title {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.trading-card-subtitle {
+  display: block;
+  font-size: 15px;
+  margin-top: -12px;
+  margin-bottom: 12px;
+  color: #888;
+  text-align: center;
+}
+
+.profile-details {
+  color: #666;
+  margin-left: 15px;
+}
+
+.author-content {
+  @media (max-width: $max-mobile-width) { margin: 0 4%; }
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-container.img-edit .img-thumbnail { opacity: 0.3; }
+.img-container.img-edit:hover .img-thumbnail { opacity: 0.5; }
+
+.img-edit {
+  border-radius: 6px;
+  max-width: 100%;
+  max-height: 100%;
+  flex: 1;
+  object-fit: cover;
+  cursor: pointer;
+
+  &::after {
+    font-size: 35px;
+    content: '\f044'; // font-awesome edit icon
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.img-thumbnail {
+  border-radius: 6px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  user-select: none;
+  transition: opacity 0.3s;
+}
+
+.trading-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 0 0;
+  max-width: 100%;
+  padding: 15px 15px 5px;
+  border-radius: 4px;
+  height: auto;
+  float: left;
+  // On mobile, show the thumbnails as full width.
+  width: 100%;
+  height: 350px;
+  box-sizing: border-box;
+
+  @media (max-width: $max-mobile-width) { height: auto; }
+  @media (min-width: $max-mobile-width) {
+    float: left;
+    width: 228px;
+    position: relative;
+    min-height: 1px;
+  }
+
+  &:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+}
+
+.trading-card-horizontal {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: auto;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.trading-card-details-img-zone {
+  max-width: 500px;
+}
+
+.trading-card-header {
+  margin-bottom: 25px;
+}

@@ -1,0 +1,110 @@
+@import 'mixin';
+@import 'variables';
+
+$error-color: #f90;
+
+.form-container {
+  max-width: 330px;
+  padding: 25px 50px;
+  margin: 25px auto;
+  //border: 5px solid #111;
+  box-shadow: 1px 1px 5px #000;
+  background-color: #555;
+  border-radius: 15px;
+  color: #eee;
+  text-align: center;
+
+  // Add a bit of vertical space if sorting the form vertically.
+  &.flex-vertical > div {
+    margin-bottom: 3px;
+  }
+
+  > div {
+    display: inline;
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    // Have the same stacking context as the other input elments in the form.
+    position: relative;
+  }
+}
+
+.input-container {
+  position: relative;
+  // Let the children of input-contianers draw on top of each other.
+  z-index: auto;
+
+  .input-text {
+    width: 100%;
+    box-sizing: border-box;
+    // Create a stacking context for children elements.
+    // IE: their z-orders interact.
+    position: relative;
+  }
+}
+
+.tooltip-error {
+  background: $error-color;
+  position: absolute;
+  // The top and the translateY(-50%) allow for centering of the tooltip.
+  top: 50%;
+  transform: translateX(-110%) translateY(-50%);
+  padding: 7px;
+  // Let's erase a small gap between the tooltip and the triangle reminder.
+  border: 1px solid $error-color;
+  border-radius: 4px;
+}
+
+// Triangle label.
+// see CSS triangle http://codepen.io/chriscoyier/pen/lotjh
+.tooltip-error::after {
+  content: '';
+  position: absolute;
+  top: 50%;// center vertically.
+  transform: translateY(-50%);// center vertically.
+  left: 100%; // Position on the right side of the tooltip.
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent $error-color;
+}
+
+textarea.input-text {
+  resize: vertical;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.input-text,
+.input-dropdown {
+  display: inherit;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: $btn-border-radius-base;
+  padding-left: 15px !important;
+  outline: none;
+  color: #000;
+
+  &:focus {
+    border: 1px solid #f90;
+    box-shadow: 0 0 0 2px #f90;
+    // When two inputs are right next to each other,
+    // The border will draw behind the other unless we
+    // bring it to the front with z-index.
+    z-index: 3;
+  }
+
+  &.error {
+    @include shake;
+    background-color: #ffcdc4;
+    border: 1px solid #ce2b0e;
+    box-shadow: 0 0 0 1px #ce2b0e;
+    // The border always needs to be drawn on top of other buttons.
+    z-index: 3;
+
+    &::placeholder {
+      color: #d6887a !important;
+    }
+  }
+}

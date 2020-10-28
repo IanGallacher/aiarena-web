@@ -21,3 +21,13 @@ services:
     tty: true
     volumes:
       - .:/aiarena-web
+  webpack:
+    build: .
+    command: bash -c entrypoints/webpack.sh
+    image: 'aiarena-web'
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/aiarena-web
