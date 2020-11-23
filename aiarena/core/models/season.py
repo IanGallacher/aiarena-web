@@ -1,8 +1,7 @@
 import logging
 
-from django.core.files import File
 from django.db import models, transaction
-from django.db.models.signals import post_save, pre_save
+from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.urls import reverse
 from django.utils import timezone
@@ -12,7 +11,6 @@ from django.utils.safestring import mark_safe
 from aiarena.api.arenaclient.exceptions import NoCurrentSeason, MultipleCurrentSeasons
 from .competition import Competition
 from .mixins import LockableModelMixin
-
 
 logger = logging.getLogger(__name__)
 
