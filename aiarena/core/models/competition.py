@@ -24,8 +24,5 @@ class Competition(models.Model):
     def map_pool(self):
         return self.maps.all()
 
-    def get_divisions(self):
-        return self.divisions.all()
-
     def __str__(self):
-        return f"{self.name}, {self.get_type()}, Divisions: {len(self.get_divisions())}"
+        return f"{self.name}, {self.get_type()}"

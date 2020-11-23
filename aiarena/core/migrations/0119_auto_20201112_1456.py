@@ -26,19 +26,6 @@ class Migration(migrations.Migration):
             name='replay_archive_zip',
             field=models.FileField(blank=True, null=True, upload_to=aiarena.core.models.season.replay_archive_upload_to),
         ),
-        migrations.CreateModel(
-            name='Division',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50)),
-                ('competition', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='divisions', to='core.Competition')),
-            ],
-        ),
-        migrations.AddField(
-            model_name='bot',
-            name='divisions',
-            field=models.ManyToManyField(related_name='bots', to='core.Division'),
-        ),
         migrations.AddField(
             model_name='map',
             name='competition',
