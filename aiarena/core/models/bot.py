@@ -4,6 +4,7 @@ import uuid
 from constance import config
 from django.core.exceptions import ValidationError
 from django.db import models, transaction
+from django.db.models import Sum
 from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
 from django.urls import reverse
@@ -85,6 +86,14 @@ class Bot(models.Model, LockableModelMixin):
     @property
     def get_divisions(self):
         return self.divisions.all()
+
+    @property
+    def current_elo_trend(self):
+        from .relative_result import RelativeResult
+        return (RelativeResult.objects
+            .filter(me__bot=self)
+            .order_by('-created')[:30]
+            .aggregate(Sum('elo_change'))['elo_change__sum'])
 
     @property
     def current_matches(self):
@@ -174,10 +183,10 @@ class Bot(models.Model, LockableModelMixin):
     def active_count():
         return Bot.objects.filter(active=True).count()
 
-    def get_random_active_excluding_self(self):
+    def get_random_active_excluding_self(self, **kwargs):
         if Bot.active_count() <= 1:
             raise RuntimeError("I am the only bot.")
-        return Bot.objects.filter(active=True).exclude(id=self.id).order_by('?').first()
+        return Bot.objects.filter(active=True, **kwargs).exclude(id=self.id).order_by('?').first()
 
     @cached_property
     def get_absolute_url(self):
