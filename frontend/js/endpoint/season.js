@@ -1,9 +1,9 @@
 import axios from "axios";
 import React from "react";
 
-import { API_URL } from "./../app.js";
-import CustomReactTable from "./../table/table.jsx";
-import TableCell from "./../table/table-cell.jsx";
+import { API_URL } from "../app.js";
+import CustomReactTable from "../table/table.jsx";
+import TableCell from "../table/table-cell.jsx";
 
 export default class Season extends React.Component {
   constructor(props) {

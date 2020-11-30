@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { PieChartCustom } from "./../component/chart.jsx";
+import { PieChartCustom } from "./chart.jsx";
 
 export default class WinRatePieChart extends React.Component {
   constructor(props) {

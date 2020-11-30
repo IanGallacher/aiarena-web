@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ModalContext } from "./../context/modal-context.js";
+import { ModalContext } from "../context/modal-context.js";
 
 export function confirmDestructiveAction(destructiveAction, label) {
   label = label || "Are you sure?";

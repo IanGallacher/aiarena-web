@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import ReactRouterPropTypes from "react-router-prop-types";
 import { withRouter } from "react-router";
 
-import CustomReactTable from "./../table/table.jsx";
+import CustomReactTable from "./table.jsx";
 
 class FetchTable extends React.Component {
   constructor(props) {

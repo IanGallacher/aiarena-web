@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import { Image } from "./image.jsx";
 import UserTitle from "./user-title.jsx";
-import UserPropType from "./../custom-proptypes/user.js";
+import UserPropType from "../custom-proptypes/user.js";
 
-const default_avatar_path = require("./../../img/avatar.jpg");
+const default_avatar_path = require("../../img/avatar.jpg");
 
 export default class AuthorTradingCard extends React.Component {
   static propTypes = { user: UserPropType }

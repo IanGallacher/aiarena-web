@@ -3,17 +3,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactRouterPropTypes from "react-router-prop-types";
 
-import AlertLogic from "./../logic/alert.js";
-import { API_URL } from "./../app.js";
-import FileUpload from "./../component/file-upload.jsx";
-import { TextInput, Dropdown } from "./../component/form.jsx";
-import { confirmDestructiveAction } from "./../component/confirm-destructive-action.jsx";
+import AlertLogic from "../logic/alert.js";
+import { API_URL } from "../app.js";
+import FileUpload from "../component/file-upload.jsx";
+import { TextInput, Dropdown } from "../component/form.jsx";
+import { confirmDestructiveAction } from "../component/confirm-destructive-action.jsx";
 
-import CustomReactTable from "./../table/table.jsx";
-import TableCell from "./../table/table-cell.jsx";
-import SchemaFactory from "./../table/schema-factory.jsx";
+import CustomReactTable from "../table/table.jsx";
+import TableCell from "../table/table-cell.jsx";
+import SchemaFactory from "../table/schema-factory.jsx";
 
-import { ModalContext } from "./../context/modal-context.js";
+import { ModalContext } from "../context/modal-context.js";
 
 class ManualGameUpload extends React.PureComponent {
   static propTypes = {

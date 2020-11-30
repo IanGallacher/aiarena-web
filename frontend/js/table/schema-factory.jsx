@@ -1,4 +1,4 @@
-import { renderNameWithPatreon } from "./../component/user-title.jsx";
+import { renderNameWithPatreon } from "../component/user-title.jsx";
 
 export default class SchemaFactory {
   static BotNameSchema(context) {

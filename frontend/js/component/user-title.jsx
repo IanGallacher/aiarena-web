@@ -1,5 +1,5 @@
 import React from "react";
-import UserPropType from "./../custom-proptypes/user.js";
+import UserPropType from "../custom-proptypes/user.js";
 
 let PATREON_TIER_CLASSES = {
   "Gold": "patreon-tier-gold",

@@ -2,15 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, NavLink } from "react-router-dom";
 
-import AlertLogic from "./../logic/alert.js";
-import LoginLogic from "./../logic/login.js";
+import AlertLogic from "../logic/alert.js";
+import LoginLogic from "../logic/login.js";
 import {
   RenderIfRole,
   RenderIfLoggedIn,
   RenderIfLoggedOut
-} from "./../logic/permission.js";
+} from "../logic/permission.js";
 
-const logo_path = require("./../../img/Yc40O.png");
+const logo_path = require("../../img/Yc40O.png");
 const Separator = () => <li className="navbar-divider">|</li>;
 
 export default class Header extends React.Component {

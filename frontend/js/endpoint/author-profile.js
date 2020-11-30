@@ -2,24 +2,24 @@ import axios from "axios";
 import React from "react";
 import PropTypes from "prop-types";
 import ReactRouterPropTypes from "react-router-prop-types";
-import UserPropType from "./../custom-proptypes/user.js";
+import UserPropType from "../custom-proptypes/user.js";
 import { withRouter } from "react-router";
 
-import { ModalContext } from "./../context/modal-context.js";
+import { ModalContext } from "../context/modal-context.js";
 
-import { API_URL } from "./../app.js";
-import { EditableImage } from "./../component/image.jsx";
-import BotUpload from "./../component/bot-upload.jsx";
-import { TextInput } from "./../component/form.jsx";
-import FormZone from "./../component/form-zone.jsx";
-import UserTitle from "./../component/user-title.jsx";
-import ProfileDetail from "./../component/profile/profile-detail.jsx";
+import { API_URL } from "../app.js";
+import { EditableImage } from "../component/image.jsx";
+import BotUpload from "../component/bot-upload.jsx";
+import { TextInput } from "../component/form.jsx";
+import FormZone from "../component/form-zone.jsx";
+import UserTitle from "../component/user-title.jsx";
+import ProfileDetail from "../component/profile/profile-detail.jsx";
 
-import FetchTable from "./../table/table-fetch.jsx";
-import TableCell from "./../table/table-cell.jsx";
-import SchemaFactory from "./../table/schema-factory.jsx";
+import FetchTable from "../table/table-fetch.jsx";
+import TableCell from "../table/table-cell.jsx";
+import SchemaFactory from "../table/schema-factory.jsx";
 
-const default_avatar_path = require("./../../img/avatar.jpg");
+const default_avatar_path = require("../../img/avatar.jpg");
 
 
 function AuthorDetails(props) {

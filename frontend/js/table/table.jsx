@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import LoadingAnimation from "./../component/loading.jsx";
+import LoadingAnimation from "../component/loading.jsx";
 
 import TableBody from "./table-body.jsx";
 import TableHeader from "./table-header.jsx";

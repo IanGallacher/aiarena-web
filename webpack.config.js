@@ -38,7 +38,27 @@ module.exports = {
     // Let React handle routing.
     historyApiFallback: true,
     host: '0.0.0.0',
-    port: 3000
+    port: 3000,
+    proxy: {
+      "/api": {
+        target: {
+          host: "django",
+          protocol: 'http:',
+          port: 8000
+        },
+        changeOrigin: true,
+        secure: false
+      },
+      "/account": {
+        target: {
+          host: "django",
+          protocol: 'http:',
+          port: 8000
+        },
+        changeOrigin: true,
+        secure: false
+      }
+    }
   },
   devtool: 'source-map',
   module: {

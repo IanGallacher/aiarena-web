@@ -3,8 +3,8 @@ import { Route, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import ReactRouterPropTypes from "react-router-prop-types";
 
-import LoginLogic from "./../logic/login.js";
-import { UserContext } from "./../context/user-context.js";
+import LoginLogic from "./login.js";
+import { UserContext } from "../context/user-context.js";
 
 export function RequireLoggedInRoute ({
   component: Component,

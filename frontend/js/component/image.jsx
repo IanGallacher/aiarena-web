@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import FileUpload from "./file-upload.jsx";
-import { ModalContext } from "./../context/modal-context.js";
+import { ModalContext } from "../context/modal-context.js";
 
 function editImage(edit_url) {
   return <React.Fragment>

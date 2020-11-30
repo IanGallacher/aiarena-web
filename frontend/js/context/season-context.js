@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import ReactRouterPropTypes from "react-router-prop-types";
 import { withRouter } from "react-router";
 
-import { API_URL } from "./../app.js";
-import { Dropdown, DropdownOption } from "./../component/form.jsx";
+import { API_URL } from "../app.js";
+import { Dropdown, DropdownOption } from "../component/form.jsx";
 
 export const SeasonContext = React.createContext(
   {

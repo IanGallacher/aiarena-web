@@ -1,8 +1,8 @@
 import React from "react";
 
-import { UserContext } from "./../context/user-context.js";
-import BotUpload from "./../component/bot-upload.jsx";
-import { Slider } from "./../component/form.jsx";
+import { UserContext } from "../context/user-context.js";
+import BotUpload from "../component/bot-upload.jsx";
+import { Slider } from "../component/form.jsx";
 import AuthorProfile from "./author-profile.js";
 
 export default class ProfileSettings extends React.Component {

@@ -5,13 +5,13 @@ import ReactRouterPropTypes from "react-router-prop-types";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
-import { API_URL } from "./../app.js";
-import { SeasonSelector, SeasonContext } from "./../context/season-context.js";
-import LoadingAnimation from "./../component/loading.jsx";
-import { SimpleLineChart } from "./../component/chart.jsx";
-import WinRatePieChart from "./../component/win-rate-pie-chart.jsx";
+import { API_URL } from "../app.js";
+import { SeasonSelector, SeasonContext } from "../context/season-context.js";
+import LoadingAnimation from "../component/loading.jsx";
+import { SimpleLineChart } from "../component/chart.jsx";
+import WinRatePieChart from "../component/win-rate-pie-chart.jsx";
 
-import FetchTable from "./../table/table-fetch.jsx";
+import FetchTable from "../table/table-fetch.jsx";
 
 class BotProfile extends React.Component {
   static contextType = SeasonContext;

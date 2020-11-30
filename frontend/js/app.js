@@ -1,5 +1,5 @@
 //import 'normalize.css'; // Standardize the dom elements before continuing.
-import "./../css/style.scss";
+import "../css/style.scss";
 
 import React from "react";
 import { render } from "react-dom";

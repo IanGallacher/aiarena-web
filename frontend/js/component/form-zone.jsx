@@ -2,8 +2,8 @@ import axios from "axios";
 import React from "react";
 import PropTypes from "prop-types";
 
-import AlertLogic from "./../logic/alert.js";
-import { API_URL } from "./../app.js";
+import AlertLogic from "../logic/alert.js";
+import { API_URL } from "../app.js";
 
 export default class FormZone extends React.Component {
   constructor(props) {

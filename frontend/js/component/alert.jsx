@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import AlertLogic from "./../logic/alert.js";
+import AlertLogic from "../logic/alert.js";
 
 class Alert extends React.Component {
   constructor() {

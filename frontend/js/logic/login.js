@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "./../app.js";
+import { API_URL } from "../app.js";
 import AlertLogic from "./alert.js";
 
 export default class LoginLogic {
@@ -21,7 +21,7 @@ export default class LoginLogic {
 
   static login(login_data) {
     return new Promise (resolve => {
-      axios.post(API_URL + "/login", {
+      axios.post("/accounts/login/", {
         "username": login_data["username"],
         "password": login_data["password"]
       })

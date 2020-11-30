@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import BotPropType from "./../custom-proptypes/bot.js";
+import BotPropType from "../custom-proptypes/bot.js";
 import { TextInput, TextArea, Dropdown, DropdownOption } from "./form.jsx";
-import FormZone from "./../component/form-zone.jsx";
+import FormZone from "./form-zone.jsx";
 
 export default class BotUpload extends React.Component {
   constructor(props) {

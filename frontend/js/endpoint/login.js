@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ReactRouterPropTypes from "react-router-prop-types";
 
-import AlertLogic from "./../logic/alert.js";
-import LoginLogic from "./../logic/login.js";
+import AlertLogic from "../logic/alert.js";
+import LoginLogic from "../logic/login.js";
 
-import { TextInput, PrimaryButton } from "./../component/form.jsx";
+import { TextInput, PrimaryButton } from "../component/form.jsx";
 
 export default class Login extends React.PureComponent {
   constructor(props) {

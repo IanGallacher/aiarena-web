@@ -2,13 +2,13 @@ import axios from "axios";
 import React from "react";
 import ReactRouterPropTypes from "react-router-prop-types";
 
-import { API_URL } from "./../app.js";
-import { SeasonSelector, SeasonContext } from "./../context/season-context.js";
-import FilterBar from "./../component/filter.jsx";
+import { API_URL } from "../app.js";
+import { SeasonSelector, SeasonContext } from "../context/season-context.js";
+import FilterBar from "../component/filter.jsx";
 
-import CustomReactTable from "./../table/table.jsx";
-import TableCell from "./../table/table-cell.jsx";
-import TablePagination from "./../table/table-pagination.jsx";
+import CustomReactTable from "../table/table.jsx";
+import TableCell from "../table/table-cell.jsx";
+import TablePagination from "../table/table-pagination.jsx";
 
 export default class RecentResults extends React.Component {
   static contextType = SeasonContext;
